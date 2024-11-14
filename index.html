@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Бургер-меню -->
+    <button id="burger-button" class="burger-button">&#9776;</button>
+    <div id="side-menu" class="side-menu">
+        <div class="tab-card" onclick="showTab('game')">Игра</div>
+        <div class="tab-card" onclick="showTab('shop')">Магазин</div>
+        <div class="tab-card" onclick="showTab('upgrades-info')">Улучшения</div>
+        <div class="tab-card" onclick="showTab('achievements')">Достижения</div>
+        <div class="tab-card" onclick="showTab('developer')">Разработчики</div>
+    </div>
+    
+
+    <div id="players" class="tab-content">
+        <h2>Игроки</h2>
+        <div id="players-list"></div>
+    </div>
+
+    <div id="achievements" class="tab-content">
+        <h2>Достижения</h2>
+        <div id="achievements-list" class="achievements-container"></div>
+    </div>
+
+    <div id="game" class="tab-content">
+        <div class="centered-container">
+            <img src="images/pikmi.png" alt="Картинка игры" class="click-image" onclick="incrementCounter()">
+        </div>
+        <div class="counter">
+            <img src="images/pikmischet.png" alt="Иконка" class="icon">
+            Счёт: <span id="clicks">0</span>
+        </div>
+        <div class="seed-info">
+            <span id="seed-value">Seed: </span>
+        </div>
+    </div>
+
+    <div id="shop" class="tab-content">
+        <div id="upgrades-container"></div>
+    </div>
+
+    <div id="developer" class="tab-content">
+        <div class="developer-info-box">
+            <p>Если вам нравится игра, вы можете следить за обновлениями или связаться с разработчиками:</p>
+            <a href="https://t.me/+ZEqJZzDrLsAzNmU6" target="_blank">Telegram канал разработчиков</a>
+        </div>
+    </div>
+
+    <div id="upgrades-info" class="tab-content">
+        <h2>Количество купленных улучшений</h2>
+        <div class="upgrade-info">
+            <p>Курсоры: <span id="cursor-count">0</span> (<span id="cursor-rate">0</span> очков в пять секунд)</p>
+            <p>Бабушки: <span id="grandma-count">0</span> (<span id="grandma-rate">0</span> очков в пятнадцать секунд)</p>
+            <p>Фабрики: <span id="factory-count">0</span> (<span id="factory-rate">0</span> очков в тридцать секунд)</p>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
